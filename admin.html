@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TechShop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="shop.html">В магазин</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="addProduct" style="height: auto;min-height: auto; margin-top: 60px">
+        <h1>Поиск товара:</h1>
+        <input type="text" placeholder="Введите название..." id="searchReq">
+        <button id="saveData" style="margin-top: 10px">Сохранить записи в .json</button>
+    </div>
+    <table id="products_table">
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Цена</th>
+            <th>Скидка</th>
+            <th>Категория</th>
+            <th>Рейтинг</th>
+            <th>Описание</th>
+            <th>Ссылка на изображение</th>
+            <th>Управление</th>
+        </tr>
+    </table>
+    <div class="addProduct">
+        <h1>Добавить товар:</h1>
+        <input type="text" id="newid" placeholder="ID (повторения исключены!)">
+        <input type="text" id="newtitle" placeholder="Название">
+        <input type="text" id="newprice" placeholder="Цена">
+        <input type="text" id="newprom" placeholder="Скидка (1 - да, 2 - нет)">
+        <input type="text" id="newcat" placeholder="Категория [1;3]">
+        <input type="text" id="newcattext" placeholder="Название категории">
+        <input type="text" id="newrait" placeholder="Рейтинг [1;5]">
+        <input type="text" id="newdesc" placeholder="Описание">
+        <input type="text" id="newimg" placeholder="Ссылка на изображение (не абсолютная)">
+        <button id="addnew">Добавить товар</button>
+    </div>
+    <footer>
+        <div class="left">TechShop Comp. &copy; All rights reserved.</div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="adm_script.js"></script>
+</body>
+</html>
